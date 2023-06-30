@@ -9,6 +9,7 @@ body {
     align-items: center;
     font-family: sans-serif;
     user-select: none;
+    font-size: 24px;
 }
 
 table, tr, td  {
@@ -22,4 +23,10 @@ td {
     background-color: white;
     text-align: center;
     border-radius: 20px;
+}
+
+#controlButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
