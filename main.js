@@ -54,7 +54,6 @@ function hideNumbers() {
         e.style.color = '#4c6da6';
         e.style.backgroundColor = '#4c6da6';
     })
-
 }
 
 function startGame() {
@@ -64,6 +63,7 @@ function startGame() {
 
 function gameOver() {
     tiles.forEach((e) => {
+        e.style.backgroundColor = 'black';
         e.style.backgroundColor = 'red';
         gameStatus = "loser";
     });
