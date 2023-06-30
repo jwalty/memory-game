@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(105, 190, 232);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+table, tr, td  {
+    border-spacing: 20px;
+
+}
+
+td {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+}
