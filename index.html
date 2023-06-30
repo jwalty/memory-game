@@ -8,7 +8,7 @@
     <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
     <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
 </head>
-<body>
+<body onload="autoGame()">
 
     <div id="game-container">
         <table>
@@ -40,8 +40,8 @@
     </div>
 
     <div id="controlButtons">
-        <button onclick="autoGame()">auto-game</button>
-        <input type="number" id="howManyToGuess" placeholder="1" min="1" max="16">
+        <!-- <button onclick="autoGame()">continue</button>
+        <input type="number" id="howManyToGuess" value="3" min="1" max="16"> -->
     </div>
     
 

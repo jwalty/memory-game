@@ -3,9 +3,20 @@ let tiles = document.querySelectorAll('td');
 let currentNum = 1;
 let numbersMade = 0;
 let gameStatus = "shown";
+let tilesToGuess = 3;
 
 tiles.forEach((e) => {
     e.addEventListener('mousedown', () => {
+        if (gameStatus == "winner") {
+            autoGame();
+            return;
+        }
+        if (gameStatus == "loser") {
+            reset();
+            tilesToGuess = 3;
+            autoGame();
+            return;
+        }
         if (gameStatus == "shown") {
             hideNumbers();
             startGame();
@@ -60,23 +71,20 @@ function startGame() {
     gameStatus = "playing";
 }
 
-function gameOver() {
-
-}
-
 function checkForWinner() {
     if (currentNum == numbersMade) {
         tiles.forEach((e) => {
             e.style.backgroundColor = '#8ff795';
             gameStatus = "winner";
         });
+        tilesToGuess++;
     }
 }
 
 function autoGame() {
     reset();
-    let howManyToGuess = document.getElementById('howManyToGuess').value;
-    for (let i=0; i < howManyToGuess; i++) {
+    // let howManyToGuess = document.getElementById('howManyToGuess').value;
+    for (let i=0; i < tilesToGuess; i++) {
         selectTile();
     }
 }
