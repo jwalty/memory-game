@@ -24,9 +24,3 @@ td {
     text-align: center;
     border-radius: 20px;
 }
-
-#controlButtons {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}

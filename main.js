@@ -4,16 +4,23 @@ let currentNum = 1;
 let numbersMade = 0;
 let gameStatus = "shown";
 let tilesToGuess = 3;
+let highscore = 0;
 
 tiles.forEach((e) => {
     e.addEventListener('mousedown', () => {
         if (gameStatus == "winner") {
             autoGame();
+            document.getElementById('currentLevel').textContent = tilesToGuess;
+            if (tilesToGuess > highscore) {
+                highscore = tilesToGuess;
+                document.getElementById('highScore').textContent = highscore;
+            }
             return;
         }
         if (gameStatus == "loser") {
             reset();
             tilesToGuess = 3;
+            document.getElementById('currentLevel').textContent = tilesToGuess;
             autoGame();
             return;
         }
