@@ -16,16 +16,15 @@ tiles.forEach((e) => {
             currentNum++;
             checkForWinner();
         } else {
-            gameOver();
-            
+            tiles.forEach((e) => {
+                e.style.color = 'black';
+                e.style.backgroundColor = 'white';
+                gameStatus = "loser";
+            });
+            e.style.backgroundColor = 'red';
         }
     })
 });
-
-function testLog() {
-    console.log(currentNum);
-    console.log(numbersMade);
-}
 
 function reset() {
     currentNum = 1;
@@ -62,11 +61,7 @@ function startGame() {
 }
 
 function gameOver() {
-    tiles.forEach((e) => {
-        e.style.backgroundColor = 'black';
-        e.style.backgroundColor = 'red';
-        gameStatus = "loser";
-    });
+
 }
 
 function checkForWinner() {
